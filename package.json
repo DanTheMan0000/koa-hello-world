@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DanTheMan0000/koa-hello-world/issues"
   },
-  "homepage": "https://github.com/DanTheMan0000/koa-hello-world#readme"
+  "homepage": "https://github.com/DanTheMan0000/koa-hello-world#readme",
+  "dependencies": {
+    "babel-core": "^6.11.4"
+  }
 }
