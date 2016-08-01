@@ -1,0 +1,19 @@
+{
+  "name": "koa-hello-world",
+  "version": "1.0.0",
+  "description": "console.log(\"This is my first\"); This is a test app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanTheMan0000/koa-hello-world.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanTheMan0000/koa-hello-world/issues"
+  },
+  "homepage": "https://github.com/DanTheMan0000/koa-hello-world#readme"
+}
