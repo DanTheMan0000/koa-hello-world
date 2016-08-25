@@ -5,8 +5,9 @@ const app = new Koa();
 const router = Router();
 
 
-router.get('/:8000', (ctx, next) => {
-  ctx.body = ('Hello World');
+router.get('/', (ctx , next) => {
+  ctx.body = "Hello World";
+  // console.log("Hello World") <-- 'console.log()' prints out stuff to your console
   ctx.type = 'json';
 });
 
