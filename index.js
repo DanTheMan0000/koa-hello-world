@@ -7,8 +7,7 @@ const router = Router();
 
 router.get('/', (ctx , next) => {
   ctx.body = "Hello World";
-  // console.log("Hello World") <-- 'console.log()' prints out stuff to your console
-  ctx.type = 'json';
+  ctx.type = 'html';
 });
 
 
