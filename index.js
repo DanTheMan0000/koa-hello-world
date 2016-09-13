@@ -6,16 +6,19 @@ const app = new Koa();
 const router = Router();
 
 
-router.get('/', (ctx , next) => {
-  ctx.body = "Hello World";
-  ctx.type = 'html';
-});
 
+// Let's disable this for now, but...
+// 1. What do you think will happen if you were to uncomment
+//    lines 14-20? Try it and see. Why does that happen?
+//
+//router.get('/', (ctx , next) => {
+//  ctx.body = "Hello World";
+//  ctx.type = 'html';
+//});
 
+//app.use(router.routes());
+//app.use(router.allowedMethods());
 
-app.use(router.routes());
-app.use(router.allowedMethods());
-
-app.use(serveStatic('/public', {fallthrough: false}));
+app.use(serveStatic('./public', {fallthrough: false}));
 
 app.listen(8000, () => {console.log('Server listening on http://127.0.0.1:8000' );});
