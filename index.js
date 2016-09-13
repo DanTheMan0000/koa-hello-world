@@ -6,18 +6,17 @@ const app = new Koa();
 const router = Router();
 
 
-
-// Let's disable this for now, but...
-// 1. What do you think will happen if you were to uncomment
-//    lines 14-20? Try it and see. Why does that happen?
-//
+router.get('/john-doe', (ctx , next) => {
+  ctx.body = {name: 'John Doe', id: 20};
+  ctx.type = 'json';
+});
 //router.get('/', (ctx , next) => {
-//  ctx.body = "Hello World";
-//  ctx.type = 'html';
+  //ctx.body = "Hello World";
+  //ctx.type = 'html';
 //});
 
-//app.use(router.routes());
-//app.use(router.allowedMethods());
+app.use(router.routes());
+app.use(router.allowedMethods());
 
 app.use(serveStatic('./public', {fallthrough: false}));
 
