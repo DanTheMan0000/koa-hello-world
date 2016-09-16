@@ -6,14 +6,14 @@ const app = new Koa();
 const router = Router();
 
 
-router.get('/john-doe', (ctx , next) => {
-  ctx.body = {name: 'John Doe', id: 20};
-  ctx.type = 'json';
-});
-//router.get('/', (ctx , next) => {
-  //ctx.body = "Hello World";
-  //ctx.type = 'html';
-//});
+router.get('/', (ctx , next) => {
+  let specifiedHeader = ctx.accepts('json', 'html');
+    if (specifiedHeader === 'json' ) {
+      ctx.body = {name: 'John Doe', id: 20};
+}
+else{
+  next();
+}});
 
 app.use(router.routes());
 app.use(router.allowedMethods());
