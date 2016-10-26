@@ -11,8 +11,9 @@
    ========================================================================== */
 
 html {
-    color: orange;
-    font-size: 1em;
+    color: 	#FF6347;
+    background-color: #F5FFFA ;
+    font-size: 2em; //1em
     line-height: 1.4;
 }
 
