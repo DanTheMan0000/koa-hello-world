@@ -2,6 +2,8 @@ import Koa from 'koa';
 import Router from 'koa-router';
 import serveStatic from 'koa-serve-static';
 
+
+
 const app = new Koa();
 const router = Router();
 
@@ -15,8 +17,15 @@ else{
   next();
 }});
 
+app.get('/cool', function(request, response) {
+  response.send(cool());
+  next();
+});
+
 app.use(router.routes());
 app.use(router.allowedMethods());
+
+
 
 app.use(serveStatic('./public', {fallthrough: false}));
 
