@@ -17,10 +17,7 @@ else{
   next();
 }});
 
-app.get('/cool', function(request, response) {
-  response.send(cool());
-  next();
-});
+
 
 app.use(router.routes());
 app.use(router.allowedMethods());
