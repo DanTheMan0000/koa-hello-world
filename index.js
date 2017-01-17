@@ -4,7 +4,6 @@ import serveStatic from 'koa-serve-static';
 
 
 
-const PORT = process.env.PORT || 8000;
 const app = new Koa();
 const router = Router();
 
@@ -27,4 +26,4 @@ app.use(router.allowedMethods());
 
 app.use(serveStatic('./public', {fallthrough: false}));
 
-app.listen(PORT, () => {console.log(`Server listening on http://127.0.0.1:${PORT}` );});
+app.listen(8000, () => {console.log('Server listening on http://127.0.0.1:8000' );});
